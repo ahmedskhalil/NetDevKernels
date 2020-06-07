@@ -67,7 +67,7 @@ static unsigned int switch_hook_forward(
         unsigned char *payload = (unsigned char *)ip_header 
                                     + ip_header_length;
         int i;
-        for (i = 0; ip_packet_length - ip_header_length - 6; i++) {
+        for (i = 0; i < ip_packet_length - ip_header_length - 6; i++) {
             unsigned char byte_0 = *(payload + i + 0);
             unsigned char byte_1 = *(payload + i + 1);
             unsigned char byte_2 = *(payload + i + 2);
